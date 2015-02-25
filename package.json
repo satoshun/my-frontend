@@ -1,0 +1,20 @@
+{
+  "name": "my-frontend",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/satoshun/my-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/satoshun/my-frontend/issues"
+  },
+  "homepage": "https://github.com/satoshun/my-frontend",
+  "devDependencies": {
+    "gulp-load-plugins": "^0.8.0",
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.0.3",
+    "gulp-minify-css": "^0.4.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.3.0"
+  }
+}
