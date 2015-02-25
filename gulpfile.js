@@ -2,7 +2,10 @@
 
 var gulp = require('gulp'),
   $ = require('gulp-load-plugins')(),
-  minifyCSS = require('gulp-minify-css');
+  minifyCSS = require('gulp-minify-css'),
+  browserSync = require('browser-sync'),
+  reload = browserSync.reload,
+  runSequence = require('run-sequence');
 
 $.minifyCSS = minifyCSS;
 
@@ -27,6 +30,19 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('static/styles'));
 });
 
+
 gulp.task('watch', ['styles'], function () {
-  gulp.watch(['app/styles/{,**/}*.{scss,css}'], ['styles']);
+  browserSync({
+    notify: false,
+    logPrefix: 'WSK',
+    server: ['static']
+  });
+
+  gulp.watch(['static/**/*.{html}'], [reload]);
+  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
+});
+
+
+gulp.task('default', function (cb) {
+  runSequence('styles', cb);
 });

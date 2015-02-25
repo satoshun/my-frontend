@@ -14,7 +14,8 @@
 
 ## gulp.js(build tool)
 
--
+- browserSync
+- minifyCSS
 
 
 ## etc
