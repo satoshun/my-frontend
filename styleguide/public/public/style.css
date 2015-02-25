@@ -1,61 +1,116 @@
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* Grid system
+
+Styleguide 2.0
+*/
+/* basic of Grid system
+
+Markup:
+<div class="row clearfix">
+  <div class="{$modifiers}">1</div><div class="{$modifiers}">2</div>
+</div>
+
+.col-md-4 - about width 33%
+.col-md-6 - about width 50%
+
+Styleguide 2.1
+*/
+.row {
+  margin: 0 auto;
+}
+.row .col-md-1 {
+  width: 8.25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-2 {
+  width: 16.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-3 {
+  width: 24.75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-4 {
+  width: 33%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-5 {
+  width: 41.25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-6 {
+  width: 49.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-7 {
+  width: 57.75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-8 {
+  width: 66%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-9 {
+  width: 74.25%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-10 {
+  width: 82.5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+.row .col-md-11 {
+  width: 90.75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+
+/* Grid system with showed grid
+
+Markup:
+<div class="row show-grid clearfix">
+  <div class="{$modifiers}">1</div><div class="{$modifiers}">2</div>
+</div>
+
+.col-md-4 - about width 33%
+.col-md-6 - about width 50%
+
+Styleguide 2.2
+*/
+.show-grid [class^=col-] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
 .color--red {
   color: #cb4437;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
 }
 
 html,
@@ -68,21 +123,39 @@ body {
 
 body {
   position: relative;
-  box-sizing: border-box;
   min-height: 100%;
 }
 
-/*
-A container base block element.
+* {
+  box-sizing: border-box;
+}
 
-Markup: <div class="color--red {$modifiers}">containar</div>
+/* A base classes
+
+Styleguide 1.0
+*/
+/* A container base block element.
+
+Markup: <div class="{$modifiers}">containar</div>
 
 .container - base block
 
-Styleguide 1.0
+Styleguide 1.1
 */
 .container {
   position: relative;
   padding: 0 3%;
   margin: 0 auto;
+}
+
+/* A generic
+
+Markup: <div class="{$modifiers}">GENERIC CLASS</div>
+
+.centered - centering value
+
+Styleguide 1.2
+*/
+.centered {
+  text-align: center;
 }

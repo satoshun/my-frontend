@@ -39,7 +39,7 @@ gulp.task('styleguide', function() {
     .pipe(gulp.dest('styleguide/public'));
 
   gulp.src('./static/styles/main.css')
-    .pipe($.rename('style.css'))
+    .pipe($.concat('styleguide/public/public/style.css'))
     .pipe(gulp.dest('styleguide/public/public/'));
 });
 

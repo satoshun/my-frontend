@@ -12,20 +12,39 @@ body {
 
 body {
   position: relative;
-  box-sizing: border-box;
   min-height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
 
-/*
-A container base block element.
+/* A base classes
+
+Styleguide 1.0
+*/
+
+
+/* A container base block element.
 
 Markup: <div class="{$modifiers}">containar</div>
 
 .container - base block
 
-Styleguide 1.0
+Styleguide 1.1
 */
 .container {
   @include container;
+}
+
+/* A generic
+
+Markup: <div class="{$modifiers}">GENERIC CLASS</div>
+
+.centered - centering value
+
+Styleguide 1.2
+*/
+.centered {
+  text-align: center;
 }

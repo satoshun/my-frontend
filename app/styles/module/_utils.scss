@@ -31,3 +31,9 @@ $fontHuge: 110px !default;
   padding: 0 3%;
   margin: 0 auto;
 }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}

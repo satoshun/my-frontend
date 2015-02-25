@@ -34,9 +34,9 @@
   <div role="main" id="kss-main">
     <article id="kss-content">
 
-            <h1 class="kss-title"><span class="kss-ref">1.0</span> - A base classes</h1>
+            <h1 class="kss-title"><span class="kss-ref">2.0</span> - Grid system</h1>
                       <section class="kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.1</span> - A container base block element.</h1>
+            <h1 class="kss-title"><span class="kss-ref">2.1</span> - basic of Grid system</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <tr class="kss-mod-desc-group">
@@ -44,24 +44,40 @@
                     <td class="kss-mod-name"></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div class="{$modifiers}">containar</div></td>
+                    <td colspan="2"><div class="row clearfix">
+  <div class="{$modifiers}">1</div><div class="{$modifiers}">2</div>
+</div></td>
                   </tr>
                   <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>base block</p>
+                    <td class="kss-mod-desc"><p>about width 33%</p>
 </td>
-                    <td class="kss-mod-name"><p>.container</p></td>
+                    <td class="kss-mod-name"><p>.col-md-4</p></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div class="container">containar</div></td>
+                    <td colspan="2"><div class="row clearfix">
+  <div class="col-md-4">1</div><div class="col-md-4">2</div>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>about width 50%</p>
+</td>
+                    <td class="kss-mod-name"><p>.col-md-6</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="row clearfix">
+  <div class="col-md-6">1</div><div class="col-md-6">2</div>
+</div></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers}&quot;&gt;containar&lt;/div&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;row clearfix&quot;&gt;
+  &lt;div class=&quot;{$modifiers}&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;{$modifiers}&quot;&gt;2&lt;/div&gt;
+&lt;/div&gt;</pre>
                 </div>
           
             </section>
            <section class="kss-depth-2">
-            <h1 class="kss-title"><span class="kss-ref">1.2</span> - A generic</h1>
+            <h1 class="kss-title"><span class="kss-ref">2.2</span> - Grid system with showed grid</h1>
                 <div class="kss-box"></div>
                 <table class="kss-mod-list">
                   <tr class="kss-mod-desc-group">
@@ -69,19 +85,35 @@
                     <td class="kss-mod-name"></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div class="{$modifiers}">GENERIC CLASS</div></td>
+                    <td colspan="2"><div class="row show-grid clearfix">
+  <div class="{$modifiers}">1</div><div class="{$modifiers}">2</div>
+</div></td>
                   </tr>
                   <tr class="kss-mod-desc-group">
-                    <td class="kss-mod-desc"><p>centering value</p>
+                    <td class="kss-mod-desc"><p>about width 33%</p>
 </td>
-                    <td class="kss-mod-name"><p>.centered</p></td>
+                    <td class="kss-mod-name"><p>.col-md-4</p></td>
                   </tr>
                   <tr class="kss-mod-example">
-                    <td colspan="2"><div class="centered">GENERIC CLASS</div></td>
+                    <td colspan="2"><div class="row show-grid clearfix">
+  <div class="col-md-4">1</div><div class="col-md-4">2</div>
+</div></td>
+                  </tr>
+                  <tr class="kss-mod-desc-group">
+                    <td class="kss-mod-desc"><p>about width 50%</p>
+</td>
+                    <td class="kss-mod-name"><p>.col-md-6</p></td>
+                  </tr>
+                  <tr class="kss-mod-example">
+                    <td colspan="2"><div class="row show-grid clearfix">
+  <div class="col-md-6">1</div><div class="col-md-6">2</div>
+</div></td>
                   </tr>
                 </table>
                 <div class="kss-markup">
-                  <pre class="prettyprint lang-html">&lt;div class=&quot;{$modifiers}&quot;&gt;GENERIC CLASS&lt;/div&gt;</pre>
+                  <pre class="prettyprint lang-html">&lt;div class=&quot;row show-grid clearfix&quot;&gt;
+  &lt;div class=&quot;{$modifiers}&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;{$modifiers}&quot;&gt;2&lt;/div&gt;
+&lt;/div&gt;</pre>
                 </div>
           
             </section>

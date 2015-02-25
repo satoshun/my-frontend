@@ -1,0 +1,53 @@
+/* Grid system
+
+Styleguide 2.0
+*/
+
+$mdColumnCount: 12;
+
+
+/* basic of Grid system
+
+Markup:
+<div class="row clearfix">
+  <div class="{$modifiers}">1</div><div class="{$modifiers}">2</div>
+</div>
+
+.col-md-4 - about width 33%
+.col-md-6 - about width 50%
+
+Styleguide 2.1
+*/
+.row {
+  margin: 0 auto;
+
+  @for $i from 1 to $mdColumnCount {
+    .col-md-#{$i} {
+      width: 99% / ($mdColumnCount) * $i;
+      padding-left: 10px;
+      padding-right: 10px;
+      float: left;
+    }
+  }
+}
+
+/* Grid system with showed grid
+
+Markup:
+<div class="row show-grid clearfix">
+  <div class="{$modifiers}">1</div><div class="{$modifiers}">2</div>
+</div>
+
+.col-md-4 - about width 33%
+.col-md-6 - about width 50%
+
+Styleguide 2.2
+*/
+.show-grid {
+  [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+  }
+}
