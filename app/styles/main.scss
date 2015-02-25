@@ -1,7 +1,31 @@
-body {
-  font-size: 40px;
+@import "module/module";
+@import "compass/reset";
 
-  div {
-    font-size: 1.2rem;
-  }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: $fontBase;
+  color: $colorText;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+
+/*
+A container base block element.
+
+Markup: <div class="{$modifiers}">containar</div>
+
+.container - base block
+
+Styleguide 1.0
+*/
+.container {
+  @include container;
 }

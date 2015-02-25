@@ -75,7 +75,7 @@ body {
 /*
 A container base block element.
 
-Markup: <div class="{$modifiers}">containar</div>
+Markup: <div class="color--red {$modifiers}">containar</div>
 
 .container - base block
 

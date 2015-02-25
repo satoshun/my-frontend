@@ -11,7 +11,7 @@ $.minifyCSS = minifyCSS;
 
 
 gulp.task('styles', function() {
-  gulp.src('./app/styles/*.scss')
+  gulp.src('./app/styles/**/*.scss')
     .pipe($.compass({
       config_file: './config.rb',
       css: './static/styles',
@@ -31,6 +31,19 @@ gulp.task('styles', function() {
 });
 
 
+gulp.task('styleguide', function() {
+  gulp.src('./app/styles/**/*.scss')
+    .pipe($.kss({
+      overview: __dirname + '/styleguide/styleguide.md'
+    }))
+    .pipe(gulp.dest('styleguide/public'));
+
+  gulp.src('./static/styles/main.css')
+    .pipe($.rename('style.css'))
+    .pipe(gulp.dest('styleguide/public/public/'));
+});
+
+
 gulp.task('watch', ['styles'], function () {
   browserSync({
     notify: false,
@@ -39,10 +52,10 @@ gulp.task('watch', ['styles'], function () {
   });
 
   gulp.watch(['static/**/*.{html}'], [reload]);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', 'styleguide', reload]);
 });
 
 
 gulp.task('default', function (cb) {
-  runSequence('styles', cb);
+  runSequence('styles', ['styleguide'], cb);
 });

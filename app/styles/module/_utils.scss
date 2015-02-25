@@ -1,0 +1,33 @@
+// layout size
+$container: 864px !default;
+$colCount: 3 !default;
+$colWidth: 30.3% !default;
+$gutterWidth: 4.5% !default;
+
+// color
+$colorBlue: #3372df !default;
+$colorBlueSecondary: lighten($colorBlue, 30%) !default;
+$colorGreen: #0f9d58 !default;
+$colorGreenSecondary: lighten($colorGreen, 30%) !default;
+$colorRed: #cb4437 !default;
+$colorRedSecondary: lighten($colorRed, 30%) !default;
+$colorYellow: #f4b400 !default;
+$colorYellowSecondary: lighten($colorYellow, 20%) !default;
+$colorText: #404040 !default;
+
+// font
+$fontDefault: Helvetica, Arial, sans-serif !default;
+$fontSmall: 13px !default;
+$fontBase: 16px  !default;
+$fontMedium: 20px !default;
+$fontLarge: 26px !default;
+$fontXLarge: 42px !default;
+$fontXXLarge: 68px !default;
+$fontHuge: 110px !default;
+
+
+@mixin container() {
+  position: relative;
+  padding: 0 3%;
+  margin: 0 auto;
+}
